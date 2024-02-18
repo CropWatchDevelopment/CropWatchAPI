@@ -27,6 +27,24 @@
       "compilerOptions": {
         "tsConfigPath": "apps/gateway/tsconfig.app.json"
       }
+    },
+    "soil_sensor_service": {
+      "type": "application",
+      "root": "apps/soil_sensor_service",
+      "entryFile": "main",
+      "sourceRoot": "apps/soil_sensor_service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/soil_sensor_service/tsconfig.app.json"
+      }
+    },
+    "dtos": {
+      "type": "library",
+      "root": "libs/dtos",
+      "entryFile": "index",
+      "sourceRoot": "libs/dtos/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/dtos/tsconfig.lib.json"
+      }
     }
   }
 }
