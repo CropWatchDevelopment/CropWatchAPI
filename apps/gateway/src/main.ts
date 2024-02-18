@@ -1,9 +1,14 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { GatewayModule } from './gateway.module';
+import { VersioningType } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(GatewayModule);
+  app.enableVersioning({
+    type: VersioningType.URI,
+    defaultVersion: '1'
+  });
   app.enableCors();
 
   const config = new DocumentBuilder()
