@@ -5,6 +5,8 @@ import { SoilSensorModule } from './soil_sensor/soil_sensor.module';
 import { CwSsTmepnpkModule } from './soil_sensor/cw_ss_tmepnpk/cw_ss_tmepnpk.module';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { PrismaModule } from './prisma/prisma.module';
+import { CwDevicesModule } from './cw_devices/cw_devices.module';
 @Module({
   imports: [
     SoilSensorModule,
@@ -26,6 +28,8 @@ import { APP_GUARD } from '@nestjs/core';
         limit: 100
       }
     ]),
+    PrismaModule,
+    CwDevicesModule,
   ],
   controllers: [GatewayController],
   providers: [

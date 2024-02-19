@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { SoilSensorServiceService } from './soil_sensor_service.service';
-import { EventPattern } from '@nestjs/microservices';
+import { Ctx, EventPattern, RmqContext } from '@nestjs/microservices';
 import { CreateCwSsTmepnpkDto } from '@app/dtos/DTOs/create-cw_ss_tmepnpk.dto';
 
 @Controller()
@@ -16,7 +16,7 @@ export class SoilSensorServiceController {
   @EventPattern('CREATE')
   getCreate(data: CreateCwSsTmepnpkDto): boolean {
     console.log('its creatin time!', data)
-    if (!data.isSimulation) {
+    if (data && !data.isSimulation) {
       this.soilSensorServiceService.getHello();
       return true;
     } else {

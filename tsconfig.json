@@ -23,6 +23,12 @@
       ],
       "@app/dtos/*": [
         "libs/dtos/src/*"
+      ],
+      "@app/database": [
+        "libs/database/src"
+      ],
+      "@app/database/*": [
+        "libs/database/src/*"
       ]
     }
   }

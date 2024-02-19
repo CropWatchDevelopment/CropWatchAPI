@@ -1,6 +1,6 @@
+import { CreateCwSsTmepnpkDto } from '@app/dtos/DTOs/create-cw_ss_tmepnpk.dto';
+import { UpdateCwSsTmepnpkDto } from '@app/dtos/DTOs/update-cw_ss_tmepnpk.dto';
 import { Injectable } from '@nestjs/common';
-import { CreateCwSsTmepnpkDto } from '../../../../../libs/dtos/src/DTOs/create-cw_ss_tmepnpk.dto';
-import { UpdateCwSsTmepnpkDto } from './dto/update-cw_ss_tmepnpk.dto';
 
 @Injectable()
 export class CwSsTmepnpkService {
